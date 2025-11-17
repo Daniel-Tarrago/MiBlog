@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SysAdmin Nexus: Blog y Proyectos de Administración de Sistemas</title>
-    <meta name="description" content="Blog personal de un Administrador de Sistemas especializado en DevOps, Cloud Computing, Automatización con Python/Bash y Seguridad IT.">
-    <meta name="keywords" content="SysAdmin, DevOps, Cloud Computing, Seguridad Informática, Python, Automatización, Linux, IT">
-    <link rel="canonical" href="https://www.sysadminnexus.com/">
-
+    <title>SysAdmin Nexus: Blog Esquelético</title>
+    <meta name="description" content="Blog personal de un Administrador de Sistemas especializado en DevOps y Cloud Computing (Versión Base Simple).">
+    <meta name="keywords" content="SysAdmin, DevOps, Cloud Computing, Linux, IT">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Estilos.css">
 
-    <script defer src="script.js"></script>
+    <!-- ENLACE AL ARCHIVO CSS SEPARADO -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="main-header">
         <div class="container">
-            <a href="/" class="logo">SysAdmin **Nexus**</a>
+            <a href="/" class="logo">SysAdmin <strong>Blog</strong></a>
             <nav class="main-nav">
                 <button class="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
                 <ul class="nav-list" id="navList">
                     <li><a href="/">Inicio</a></li>
+                    <li><a href="#articulos">Artículos</a></li>
                     <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#articulos">Blog/Artículos</a></li>
                     <li><a href="/contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -34,125 +33,133 @@
     <main>
         <section class="hero-section">
             <div class="container">
-                <h1>Automatización, Cloud y Seguridad: El Nexus de la Administración de Sistemas</h1>
-                <p>Soy un **Administrador de Sistemas** apasionado por simplificar la infraestructura IT. Aquí comparto proyectos reales, scripts de automatización (Python/Bash) y análisis de tendencias en DevOps y Cloud Computing.</p>
+                <h1>Automatización, Cloud y Seguridad: El Blog de Sistemas</h1>
+                <p>Comparto proyectos, scripts y análisis de tendencias en DevOps y Cloud Computing.</p>
                 <a href="#articulos" class="btn btn-primary">Últimos Artículos</a>
-                <a href="#proyectos" class="btn btn-secondary">Ver Proyectos Destacados</a>
             </div>
         </section>
 
-        <div class="ad-container">
-            <aside class="sidebar">
-                <div class="ad-placeholder">
-                    [ESPACIO PARA ANUNCIO ADSENSE/AFILIADO - 300x250]
-                </div>
-                
-                <div class="subscription-box">
-                    <h3>🚀 SysAdmin Tips en tu Buzón</h3>
-                    <p>Suscríbete para recibir scripts de automatización y guías de Cloud directamente.</p>
-                    <form action="#" method="POST">
-                        <input type="email" placeholder="Tu Email Profesional" required aria-label="Introduce tu correo electrónico">
-                        <button type="submit" class="btn btn-primary">Suscribirme</button>
-                    </form>
-                </div>
-            </aside>
+        <!-- Contenido Principal y Sidebar Layout -->
+        <div class="content-layout">
+
+            <div class="blog-content">
+                <section id="articulos" class="blog-section">
+                    <div class="container" style="padding: 0;">
+                        <h2>Últimos Artículos</h2>
+                        <ul class="article-list">
+                            <!-- Artículo Ejemplo 1 (Simplificado) -->
+                            <li>
+                                <h2><a href="#">Automatización de Backups con Bash y Cron</a></h2>
+                                <p>Tutorial detallado sobre cómo configurar scripts de copia de seguridad en Linux.</p>
+                            </li>
+                            <!-- Artículo Ejemplo 2 (Simplificado) -->
+                            <li>
+                                <h2><a href="#">Desplegando un Contenedor Docker</a></h2>
+                                <p>Guía rápida para poner en marcha tu primer servicio con Docker.</p>
+                            </li>
+                            <!-- Artículo Ejemplo 3 (Simplificado) -->
+                            <li>
+                                <h2><a href="#">Introducción a la Seguridad de Redes</a></h2>
+                                <p>Los fundamentos de firewalls, VPNs y monitorización para SysAdmins.</p>
+                            </li>
+                        </ul>
+                        <!-- Solo dejamos un enlace a proyectos para el cumplimiento de la estructura original, aunque no tiene contenido aquí -->
+                        <h2 style="margin-top: 2rem;" id="proyectos">Proyectos Destacados (Base)</h2>
+                        <p style="margin-bottom: 1rem;">Esta sección es la base para añadir las tarjetas de proyectos más adelante.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna Lateral (Sidebar) -->
+            <div class="ad-container">
+                <aside class="sidebar">
+                    <div class="ad-placeholder">
+                        [ESPACIO PARA ANUNCIO (Se puede eliminar)]
+                    </div>
+                    
+                    <div class="subscription-box">
+                        <h3>🚀 Suscripción Rápida</h3>
+                        <p>Recibe guías de Cloud y scripts directamente.</p>
+                        <form id="subscriptionForm" action="#" method="POST">
+                            <input type="email" placeholder="Tu Email Profesional" required aria-label="Introduce tu correo electrónico">
+                            <button type="submit" class="btn btn-primary">Suscribirme</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+
         </div>
 
-        <section id="proyectos" class="projects-section">
-            <div class="container">
-                <h2>Proyectos Destacados: Automatizando la Infraestructura</h2>
-                <div class="project-grid">
-                    <article class="project-card">
-                        <h3>Implementación de CI/CD con GitLab y Kubernetes</h3>
-                        <p>Diseño y despliegue de un pipeline completo para microservicios.</p>
-                        <a href="/proyectos/ci-cd-k8s" class="btn btn-tertiary">Ver Detalle</a>
-                    </article>
-                    <article class="project-card">
-                        <h3>Script de Hardening de Servidores Linux (Bash)</h3>
-                        <p>Un script esencial para aplicar políticas de seguridad en 5 minutos.</p>
-                        <a href="/proyectos/hardening-linux" class="btn btn-tertiary">Ver Detalle</a>
-                    </article>
-                    <article class="project-card">
-                        <h3>Monitoreo con Prometheus y Grafana en AWS</h3>
-                        <p>Configuración de un stack de monitoreo escalable en la nube.</p>
-                        <a href="/proyectos/prom-grafana-aws" class="btn btn-tertiary">Ver Detalle</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="articulos" class="blog-section">
-            <div class="container">
-                <h2>Últimos Artículos del Blog: Mantente al Día en IT</h2>
-                <div class="ad-placeholder-inline">
-                    [ESPACIO PARA ANUNCIO ADSENSE/AFILIADO - Banner Horizontal]
-                </div>
-                <div class="article-grid">
-                    <article class="article-card">
-                        <div class="article-image">
-                            [Image of server rack icon]
-                        </div>
-                        <h3>Optimización de costos en Google Cloud con Terraform</h3>
-                        <p>Guía paso a paso para reducir tu factura de Cloud utilizando IaC.</p>
-                        <a href="/blog/optimizacion-costos-gcp" class="read-more">Leer Artículo →</a>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-image">
-                            [Image of security shield icon]
-                        </div>
-                        <h3>Los 5 errores más comunes en la configuración de firewalls</h3>
-                        <p>Revisa tu seguridad perimetral y evita fallos críticos en la red.</p>
-                        <a href="/blog/errores-firewall" class="read-more">Leer Artículo →</a>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-image">
-                            [Image of python logo icon]
-                        </div>
-                        <h3>Introducción a la Automatización de Tareas con Python y Ansible</h3>
-                        <p>Cómo usar estas dos herramientas para gestionar flotas de servidores.</p>
-                        <a href="/blog/python-ansible-intro" class="read-more">Leer Artículo →</a>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-image">
-                            [Image of cloud computing icon]
-                        </div>
-                        <h3>Comparativa: AWS Lambda vs. Azure Functions vs. Google Cloud Functions</h3>
-                        <p>Análisis de las mejores opciones Serverless para tus microservicios.</p>
-                        <a href="/blog/comparativa-serverless" class="read-more">Leer Artículo →</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="monetization-footer">
-             <div class="ad-placeholder-footer">
-                [ESPACIO PARA ANUNCIO ADSENSE/AFILIADO - Banner Grande 728x90]
-            </div>
-        </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-links">
-                    <h4>Mapa del Sitio</h4>
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/acerca-de">Acerca de Mí</a></li>
-                        <li><a href="/politica-privacidad">Política de Privacidad</a></li>
-                        <li><a href="/aviso-legal">Aviso Legal</a></li>
-                    </ul>
-                </div>
                 <div class="social-links">
-                    <h4>Sígueme</h4>
-                    <a href="https://linkedin.com/in/usuario" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="https://github.com/usuario" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 SysAdmin Nexus. Todos los derechos reservados.</p>
+                <p>&copy; 2025 SysAdmin Blog. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT ESENCIAL (Mantenido aquí por simplicidad) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.getElementById('navList');
+
+            // Funcionalidad de menú hamburguesa (Responsive)
+            if (menuToggle && navList) {
+                menuToggle.addEventListener('click', () => {
+                    // Alterna la clase 'active' para mostrar/ocultar el menú
+                    navList.classList.toggle('active');
+                    
+                    // Mejora de accesibilidad (aria-expanded)
+                    const isExpanded = navList.classList.contains('active');
+                    menuToggle.setAttribute('aria-expanded', isExpanded);
+                    // Usamos un simple "X" y "☰" para el icono
+                    menuToggle.textContent = isExpanded ? '✕' : '☰'; 
+                });
+
+                // Cierra el menú si se hace clic en un enlace (útil en móvil)
+                navList.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navList.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        menuToggle.textContent = '☰';
+                    });
+                });
+            }
+
+            // Script para el formulario de suscripción (Feedback visual en consola, sin alert())
+            const subscriptionForm = document.getElementById('subscriptionForm');
+            if (subscriptionForm) {
+                subscriptionForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    // Usamos console.log() en lugar de alert()
+                    console.log('¡Gracias por suscribirte! Email capturado:', e.target.querySelector('input[type="email"]').value);
+                    
+                    // Aquí podrías añadir lógica para mostrar un mensaje en el DOM
+                    const messageArea = document.createElement('p');
+                    messageArea.textContent = '¡Suscripción exitosa! Revisa tu consola para el log.';
+                    messageArea.style.color = 'var(--color-accent)'; // Usamos la variable CSS
+                    messageArea.style.marginTop = '10px';
+
+                    const existingMessage = subscriptionForm.parentNode.querySelector('.success-message');
+                    if (existingMessage) existingMessage.remove();
+                    
+                    messageArea.classList.add('success-message');
+                    subscriptionForm.after(messageArea);
+
+                    subscriptionForm.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
