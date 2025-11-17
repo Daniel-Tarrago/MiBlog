@@ -120,6 +120,353 @@ body {
     color: var(--color-text-light);
 }
 
+/* --- Hero Section (H1) --- */
+.hero-section {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Layout Principal (Contenido + Sidebar) --- */
+.content-layout { /* Usamos esta clase para evitar conflictos con el tag main */
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.blog-content {
+    flex-grow: 1; 
+    padding: 20px 0;
+}
+
+.ad-container {
+    width: 300px; /* Ancho fijo para el sidebar */
+    margin-left: 30px;
+    flex-shrink: 0; /* Evita que el sidebar se encoja */
+}
+
+/* --- Sidebar (Anuncio y Suscripción) --- */
+.sidebar {
+    padding: 0;
+}
+
+.ad-placeholder {
+    min-height: 150px; /* Reducido de 250px para la versión simple */
+    background-color: #e0e0e0;
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px dashed #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+}
+
+.subscription-box {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-box h3 {
+    margin-top: 0;
+    color: var(--color-accent);
+    font-size: 1.4em;
+}
+
+.subscription-box input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.subscription-box .btn-primary {
+    width: 100%;
+    margin-top: 0;
+}
+
+/* --- Lista de Artículos (Simplificado) --- */
+.article-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.article-list li {
+    background-color: var(--color-bg-light);
+    padding: 15px 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--color-accent);
+}
+
+.article-list h2 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.article-list p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.article-list a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.article-list a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 30px 0 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centrado para versión simple */
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin: 0 20px;
+}
+
+.social-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* --- RESPONSIVE DESIGN --- */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 992px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    
+    /* Layout principal cambia a una columna */
+    .content-layout {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .ad-container {
+        width: 100%; /* El sidebar ocupa todo el ancho */
+        margin-left: 0;
+        order: -1; /* Mueve el sidebar antes del contenido en móvil */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navegación colapsable */
+    .main-nav {
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: block; /* Muestra el botón de menú */
+    }
+
+    .nav-list {
+        display: none; /* Oculta la lista por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-primary);
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-list.active {
+        display: flex; /* Muestra la lista al hacer clic */
+    }
+
+    .nav-list li a {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 50px 0;
+    }
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Optimización final de encabezados para móvil */
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .btn {
+        display: block;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .btn-secondary {
+        margin-left: 0;
+    }
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+    transition: background-color 0.3s;
+}
+
+/* Estructura General y Contenedor */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Header Fijo y Navegación --- */
+.main-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.logo strong {
+    color: var(--color-accent);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* --- Botones (Call to Action - CTA) --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+}
+
+.btn-primary:hover {
+    background-color: #c73950;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    margin-left: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+}
+
 .btn-tertiary {
     background-color: var(--color-primary);
     color: var(--color-text-light);
@@ -436,4 +783,5 @@ section {
     .btn-secondary {
         margin-left: 0;
     }
+
 }
